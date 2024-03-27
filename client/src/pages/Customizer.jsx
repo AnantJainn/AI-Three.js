@@ -67,6 +67,13 @@ const Customizer = () => {
     }
   }
 
+  setActiveFilterTab(prevState) => {
+    return {
+      ...prevState,
+      [tabName]: !prevState[tabName]
+    }
+  }
+
   const readFile = (type) => {
     reader(file).then((result) => {
       handleDecals(type, result);
